@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+}
+
+
+.list-container {
+    float: left; 
+}
+
+
+.form-container {
+    float: right;
+    margin-left:300px;
+}
