@@ -1,29 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wesen</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="ccsProyecto.css">
+    <title>Wesen Observados</title>
 </head>
+
 <body>
-    <h1>Wesen</h1>
-    <table border="2">
-        <tr>
-            <td>NOMBRES</td>
-            <td>IMAGEN</td>
-            <td>DESCRIPCION</td>
-        </tr>
-        <tr>
-            <td>ALPE</td>
-            <td></td>
-        </tr>
+    <h1>Wesen Observados</h1>
+    <div class="container">
+        <table class="list-container">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Foto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Alpe</td>
+                    <td><img style="width: 140px;" height="130px"
+                            src="https://static.wikia.nocookie.net/grimm/images/8/80/606-Beverly_Garwood_woged.png/revision/latest/scale-to-width-down/150?cb=20170212063836"
+                            alt="ALPE"></td>
+                </tr>
+                <tr>
+                    <td>Anubis</td>
+                    <td><img style="width: 140px;" height="130px"
+                            src="https://static.wikia.nocookie.net/grimm/images/3/3f/510-Krisztian_Ajandok_woged.png/revision/latest/scale-to-width-down/150?cb=20160224224912"
+                            alt="Anubis"></td>
+                </tr>
+                <tr>
+                    <td>Apgadnieks</td>
+                    <td><img style="width: 140px;" height="130px"
+                            src="https://static.wikia.nocookie.net/grimm/images/3/3d/503-Peter_woged.png/revision/latest/scale-to-width-down/150?cb=20151117183059"
+                            alt="El Cucuy"></td>
+                </tr>
+                <tr>
+                    <td>Aswang</td>
+                    <td><img style="width: 140px;" height="130px"
+                            src="https://static.wikia.nocookie.net/grimm/images/e/ef/314-Aswang.png/revision/latest/scale-to-width-down/150?cb=20140308061645"
+                            alt="Aswang"></td>
+                </tr>
+                <tr>
+                    <td>Ataktos Fuse</td>
+                    <td><img style="width: 140px;" height="130px"
+                            src="https://static.wikia.nocookie.net/grimm/images/8/8b/605-Ataktos_Fuse2.jpg/revision/latest/scale-to-width-down/150?cb=20170205021008"
+                            alt="Ataktos Fuse"></td>
+                </tr>
+                <tr>
+                    <td>Balam</td>
+                    <td><img style="width: 140px;" height="130px"
+                            src="https://static.wikia.nocookie.net/grimm/images/7/7a/Balam.png/revision/latest/scale-to-width-down/150?cb=20130422044923"
+                            alt="Balam"></td>
+                </tr>
+                <tr>
+                    <td>Barbatus Ossifrage</td>
+                    <td><img style="width: 140px;" height="130px"
+                            src="https://static.wikia.nocookie.net/grimm/images/1/1f/518-Barbatus_Ossifrage.png/revision/latest/scale-to-width-down/150?cb=20160423193651"
+                            alt="Barbatus Ossifrage"></td>
+                </tr>
+                <tr>
+                    <td>Bauerschwein</td>
+                    <td><img style="width: 140px;" height="130px"
+                            src="https://static.wikia.nocookie.net/grimm/images/5/5e/410-Acker_woged.jpg/revision/latest/scale-to-width-down/150?cb=20150124190828"
+                            alt="Bauerschwein"></td>
+                </tr>
+                <tr>
+                    <td>Blutbad</td>
+                    <td><img style="width: 140px;" height="130px"
+                            src="https://static.wikia.nocookie.net/grimm/images/1/17/606-Monroe_woged.png/revision/latest/scale-to-width-down/150?cb=20170212063909"
+                            alt="Blutbad"></td>
+                </tr>
+                <tr>
+                    <td>Coyotl</td>
+                    <td><img style="width: 140px;" height="130px"
+                            src="https://static.wikia.nocookie.net/grimm/images/5/56/408-Belem_woged.jpg/revision/latest/scale-to-width-down/150?cb=20141215031248"
+                            alt="Coyotl"></td>
+                </tr>
+            </tbody>
+        </table>
 
+        <div class="form-container">
+            <form class="form-container">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
 
+                <label for="image">Image URL:</label>
+                <input type="text" id="image" name="image"><br><br>
 
+                <label for="type">Type:</label>
+                <select id="type" name="type">
+                    <option value="lobo">Lobo</option>
+                    <option value="cánido">Cánido</option>
+                    <option value="felino">Felino</option>
+                    <option value="reptil">Reptil</option>
+                    <option value="insecto">Insecto</option>
+                    <option value="anfibio">Anfibio</option>
+                    <option value="ave">Ave</option>
+                    <option value="monstruo">Monstruo</option>
+                </select><br><br>
 
+                <label for="danger">Danger Level:</label>
+                <select id="danger" name="danger">
+                    <option value="pacífico">Pacífico</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="peligroso">Peligroso</option>
+                    <option value="violento">Violento</option>
+                </select><br><br>
 
+                <label for="description">Description:</label><br>
+                <textarea id="description" name="description"></textarea><br><br>
 
-    </table>
-    
+                <label for="notes">Grimm Notes:</label><br>
+                <textarea id="notes" name="notes"></textarea><br><br>
+
+                <input type="submit" value="Save">
+                <input type="button" value="Delete">
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>
