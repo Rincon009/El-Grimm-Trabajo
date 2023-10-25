@@ -118,18 +118,17 @@
         </table>
 
         <div class="form-container">
-            <form class="form-container">
-                
+            <form class="form-container" onsubmit="return guardarCambios()">
                 <label for="nombre">Name:</label>
-                <input type="text" id="nombre" name="nombre" readonly><br><br>
-                <br><br>
+                <input type="text" id="nombre" name="nombre"><br><br>
+          
 
                 <label for="imagen">Imagen URL: </label>
-                <input type="url" id="imagen" name="imagen" required>
+        <input type="url" id="imagen" name="imagen" required><br><br>
 
                 <br><br>
                 <label for="tipo">Tipo: </label>
-                <select id="tipo" name="tipo" required>
+        <select id="tipo" name="tipo" required>
                     <option value="" disabled selected>Selecciona el tipo</option>
                     <option value="Pesadilla">Pesadilla</option>
                     <option value="Canido">Cánido</option>
@@ -142,8 +141,8 @@
                 </select>
                 <br><br>
 
-                <label for="tipo">Peligrosidad:</label>
-                <select id="peligrosidad" name="peligrosidad" required>
+                <label for="peligrosidad">Peligrosidad:</label>
+        <select id="peligrosidad" name="peligrosidad" required>
                     <option value="" disabled selected>Selecciona la peligrosidad</option>
                     <option value="Pacifico">Pacífico</option>
                     <option value="Neutral">Neutral</option>
@@ -154,14 +153,14 @@
 
 
                 <label for="descripcion">Descripción: </label><br>
-                <textarea id="descripcion" name="descripcion" required cols="40" rows="6"></textarea>
+        <textarea id="descripcion" name="descripcion" required cols="40" rows="6"></textarea><br><br>
                 <br><br>
 
                 <label for="notas">Notas: </label><br>
-                <textarea id="notas" name="notas" required cols="40" rows="6"></textarea>
+        <textarea id="notas" name="notas" required cols="40" rows="6"></textarea><br><br>
                 <br><br>
-
-               
+       
+                <input type="submit" value="Guardar Cambios">
 
 
         </div>
