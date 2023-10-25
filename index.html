@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="ccsProyecto.css">
+    <script src="script.js"></script>
     <title>Wesen Observados</title>
 </head>
 
@@ -20,106 +21,141 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Alpe</td>
-                    <td><img style="width: 140px;" height="130px"
+                <tr id="alpe">
+                    <td onclick="mostrarInformacion('alpe')">Alpe</button>
+                    </td>
+                    <td>
+                        <img id="alpe" style="width: 140px;" height="130px"
                             src="https://static.wikia.nocookie.net/grimm/images/8/80/606-Beverly_Garwood_woged.png/revision/latest/scale-to-width-down/150?cb=20170212063836"
-                            alt="ALPE"></td>
+                            alt="ALPE" onclick="mostrarInformacion('alpe')">
+                    </td>
                 </tr>
-                <tr>
-                    <td>Anubis</td>
-                    <td><img style="width: 140px;" height="130px"
-                            src="https://static.wikia.nocookie.net/grimm/images/3/3f/510-Krisztian_Ajandok_woged.png/revision/latest/scale-to-width-down/150?cb=20160224224912"
-                            alt="Anubis"></td>
+                <tr id="apgadnieks">
+                    <td onclick="mostrarInformacion('apgadnieks')">Apgadnieks</button>
+                    </td>
+                    <td>
+                        <img id="apgadnieks" style="width: 140px;" height="130px"
+                            src="https://static.wikia.nocookie.net/grimm/images/3/3d/503-Peter_woged.png/revision/latest/scale-to-width-down/185?cb=20151117183059"
+                            alt="apgadnieks" onclick="mostrarInformacion('apgadnieks')">
+                    </td>
                 </tr>
-                <tr>
-                    <td>Apgadnieks</td>
-                    <td><img style="width: 140px;" height="130px"
-                            src="https://static.wikia.nocookie.net/grimm/images/3/3d/503-Peter_woged.png/revision/latest/scale-to-width-down/150?cb=20151117183059"
-                            alt="El Cucuy"></td>
-                </tr>
-                <tr>
-                    <td>Aswang</td>
-                    <td><img style="width: 140px;" height="130px"
+                <tr id="Aswang">
+                    <td onclick="mostrarInformacion('Aswang')">Aswang</button>
+                    </td>
+                    <td>
+                        <img id="Aswang" style="width: 140px;" height="130px"
                             src="https://static.wikia.nocookie.net/grimm/images/e/ef/314-Aswang.png/revision/latest/scale-to-width-down/150?cb=20140308061645"
-                            alt="Aswang"></td>
+                            alt="Aswang" onclick="mostrarInformacion('Aswang')">
+                    </td>
                 </tr>
-                <tr>
-                    <td>Ataktos Fuse</td>
-                    <td><img style="width: 140px;" height="130px"
-                            src="https://static.wikia.nocookie.net/grimm/images/8/8b/605-Ataktos_Fuse2.jpg/revision/latest/scale-to-width-down/150?cb=20170205021008"
-                            alt="Ataktos Fuse"></td>
-                </tr>
-                <tr>
-                    <td>Balam</td>
-                    <td><img style="width: 140px;" height="130px"
-                            src="https://static.wikia.nocookie.net/grimm/images/7/7a/Balam.png/revision/latest/scale-to-width-down/150?cb=20130422044923"
-                            alt="Balam"></td>
-                </tr>
-                <tr>
-                    <td>Barbatus Ossifrage</td>
-                    <td><img style="width: 140px;" height="130px"
-                            src="https://static.wikia.nocookie.net/grimm/images/1/1f/518-Barbatus_Ossifrage.png/revision/latest/scale-to-width-down/150?cb=20160423193651"
-                            alt="Barbatus Ossifrage"></td>
-                </tr>
-                <tr>
-                    <td>Bauerschwein</td>
-                    <td><img style="width: 140px;" height="130px"
-                            src="https://static.wikia.nocookie.net/grimm/images/5/5e/410-Acker_woged.jpg/revision/latest/scale-to-width-down/150?cb=20150124190828"
-                            alt="Bauerschwein"></td>
-                </tr>
-                <tr>
-                    <td>Blutbad</td>
-                    <td><img style="width: 140px;" height="130px"
+                <tr id="Blutbad">
+                    <td onclick="mostrarInformacion('Blutbad')">Blutbad</button>
+                    </td>
+                    <td>
+                        <img id="Blutbad" style="width: 140px;" height="130px"
                             src="https://static.wikia.nocookie.net/grimm/images/1/17/606-Monroe_woged.png/revision/latest/scale-to-width-down/150?cb=20170212063909"
-                            alt="Blutbad"></td>
+                            alt="Blutbad" onclick="mostrarInformacion('Blutbad')">
+                    </td>
                 </tr>
-                <tr>
-                    <td>Coyotl</td>
-                    <td><img style="width: 140px;" height="130px"
-                            src="https://static.wikia.nocookie.net/grimm/images/5/56/408-Belem_woged.jpg/revision/latest/scale-to-width-down/150?cb=20141215031248"
-                            alt="Coyotl"></td>
+                <tr id="Cracher-Mortel">
+                    <td onclick="mostrarInformacion('Cracher-Mortel')">Cracher-Mortel</button>
+                    </td>
+                    <td>
+                        <img id="Cracher-Mortel" style="width: 140px;" height="130px"
+                            src="https://static.wikia.nocookie.net/grimm/images/3/3f/222-Cracher-Mortel.png/revision/latest/scale-to-width-down/150?cb=201305222240272 "
+                            alt="Cracher-Mortel" onclick="mostrarInformacion('Cracher-Mortel')">
+                    </td>
                 </tr>
+                <tr id="El Cuegle">
+                    <td onclick="mostrarInformacion('El Cuegle')">El Cuegle</button>
+                    </td>
+                    <td>
+                        <img id="El Cuegle" style="width: 140px;" height="130px"
+                            src="https://static.wikia.nocookie.net/grimm/images/4/4e/604-Isidoro_Malpica_woged.png/revision/latest/scale-to-width-down/150?cb=20170211043206"
+                            alt="El Cuegle" onclick="mostrarInformacion('El Cuegle')">
+                    </td>
+                </tr>
+                <tr id="Folterseele">
+                    <td onclick="mostrarInformacion('Folterseele')">Folterseele</button>
+                    </td>
+                    <td>
+                        <img id="Folterseele" style="width: 140px;" height="130px"
+                            src="https://static.wikia.nocookie.net/grimm/images/7/7e/416-Bella_woged.png/revision/latest/scale-to-width-down/150?cb=20150404062914"
+                            alt="Folterseele" onclick="mostrarInformacion('Folterseele')">
+                    </td>
+                </tr>
+                <tr id="Hasenfussige Schnecke">
+                    <td onclick="mostrarInformacion('Hasenfussige Schnecke')">Hasenfussige Schnecke</button>
+                    </td>
+                    <td>
+                        <img id="Hasenfussige Schnecke" style="width: 140px;" height="130px"
+                            src="https://static.wikia.nocookie.net/grimm/images/0/04/506-Hasenfussige_Schnecke.jpg/revision/latest/scale-to-width-down/150?cb=20151213043022"
+                            alt="Hasenfussige Schnecke" onclick="mostrarInformacion('Hasenfussige Schnecke')">
+                    </td>
+                </tr>
+                <tr id="Huntha Lami Muuaji">
+                    <td onclick="mostrarInformacion('Huntha Lami Muuaji')">Huntha Lami Muuaji</button>
+                    </td>
+                    <td>
+                        <img id="Huntha Lami Muuaji" style="width: 140px;" height="130px"
+                            src="https://static.wikia.nocookie.net/grimm/images/b/b1/415-Huntha_Lami_Muuaji.jpg/revision/latest/scale-to-width-down/150?cb=20150328180342"
+                            alt="Huntha Lami Muuaji" onclick="mostrarInformacion('Huntha Lami Muuaji')">
+                    </td>
+                </tr>
+                <tr id="Inugami">
+                    <td onclick="mostrarInformacion('Inugami')">Inugami</button>
+                    </td>
+                    <td>
+                        <img id="Inugami" style="width: 140px;" height="130px"
+                            src="https://static.wikia.nocookie.net/grimm/images/d/d2/517-Takeshi_woged.png/revision/latest/scale-to-width-down/150?cb=20160420165148"
+                            alt="Inugami" onclick="mostrarInformacion('Inugami')">
+                    </td>
+                </tr>
+
+
+
             </tbody>
         </table>
 
         <div class="form-container">
             <form class="form-container">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name"><br><br>
+                <label for="nombre">Name:</label>
+                <input type="text" id="nombre" name="nombre" readonly><br><br>
+                <br><br>
+                <label for="imagen">Imagen URL: </label>
+                <input type="url" id="imagen" name="imagen" required>
 
-                <label for="image">Image URL:</label>
-                <input type="text" id="image" name="image"><br><br>
+                <br><br>
+                <label for="tipo">Tipo: </label>
+                <select id="tipo" name="tipo" required>
+                    <option value="" disabled selected>Selecciona el tipo</option>
+                    <option value="Pesadilla">Pesadilla</option>
+                    <option value="Canido">Cánido</option>
+                    <option value="Felino">Felino</option>
+                    <option value="Reptil">Reptil</option>
+                    <option value="Ghoul">Ghoul</option>
+                    <option value="Anfibio">Anfibio</option>
+                    <option value="Ave">Ave</option>
+                    <option value="Mostruo">Mostruo</option>
+                </select>
+                <br><br>
+                <label for="tipo">Peligrosidad:</label>
+                <select id="peligrosidad" name="peligrosidad" required>
+                    <option value="" disabled selected>Selecciona la peligrosidad</option>
+                    <option value="Pacifico">Pacífico</option>
+                    <option value="Neutral">Neutral</option>
+                    <option value="Peligroso">Peligroso</option>
+                    <option value="Violento">Violento</option>
+                </select>
+                <br><br>
+                <label for="descipcion">Descripción: </label>
+                <textarea id="descripcion" name="descripcion" required></textarea>
+                <br><br>
 
-                <label for="type">Type:</label>
-                <select id="type" name="type">
-                    <option value="lobo">Lobo</option>
-                    <option value="cánido">Cánido</option>
-                    <option value="felino">Felino</option>
-                    <option value="reptil">Reptil</option>
-                    <option value="insecto">Insecto</option>
-                    <option value="anfibio">Anfibio</option>
-                    <option value="ave">Ave</option>
-                    <option value="monstruo">Monstruo</option>
-                </select><br><br>
+                <label for="notas">Notas: </label>
+                <textarea id="notas" name="notas" required></textarea>
+                <input type="submit" value="Submit">
 
-                <label for="danger">Danger Level:</label>
-                <select id="danger" name="danger">
-                    <option value="pacífico">Pacífico</option>
-                    <option value="neutral">Neutral</option>
-                    <option value="peligroso">Peligroso</option>
-                    <option value="violento">Violento</option>
-                </select><br><br>
-
-                <label for="description">Description:</label><br>
-                <textarea id="description" name="description"></textarea><br><br>
-
-                <label for="notes">Grimm Notes:</label><br>
-                <textarea id="notes" name="notes"></textarea><br><br>
-
-                <input type="submit" value="Save">
-                <input type="button" value="Delete">
-            </form>
         </div>
     </div>
 </body>
