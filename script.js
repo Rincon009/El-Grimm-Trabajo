@@ -16,8 +16,32 @@ function mostrarInformacion(id) {
     peligrosidadSelect.value = wesen.peligrosidad;
     descripcionTextarea.value = wesen.descripcion;
     notasTextarea.value = wesen.notas;
-
 }
+function guardarCambios() {
+    var id = document.getElementById('nombre').value.toLowerCase();
+    var nombre = document.getElementById('nombre').value;
+    var imagen = document.getElementById('imagen').value;
+    var tipo = document.getElementById('tipo').value;
+    var peligrosidad = document.getElementById('peligrosidad').value;
+    var descripcion = document.getElementById('descripcion').value;
+    var notas = document.getElementById('notas').value;
+
+    var wesen = wesenInfo.find(function (w) {
+        return w.id === id;
+    });
+
+   
+    wesen.nombre = nombre;
+    wesen.imagen = imagen;
+    wesen.tipo = tipo;
+    wesen.peligrosidad = peligrosidad;
+    wesen.descripcion = descripcion;
+    wesen.notas = notas;
+
+    
+    return false;
+}
+
 
 
 var wesenInfo = [
