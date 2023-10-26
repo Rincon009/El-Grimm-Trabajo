@@ -1,14 +1,57 @@
-.container {
-    display: flex;
+body {
+    font-family: 'New Gothic Style', sans-serif;
+    font-size: xx-large;
+    background-color:  #000000;
+    background-image: url();
+    
 }
 
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
 
 .list-container {
-    float: left; 
+    width: 40%;
+    float: left;
+    margin-left: 100px;
 }
+
+.list-container th, .list-container td {
+    color: #ffffff;
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+.list-container th {
+    background-color: #06631d;
+    color: #ffffff;
+}
+
+
+
 
 
 .form-container {
+    margin-right: 160px;
     float: right;
-    margin-left: 100px;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+  
 }
+
+
+.form-container button {
+    padding: 5px 10px;
+    background-color: #000000;
+    color: #2bc400;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
