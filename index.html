@@ -121,13 +121,13 @@
 
         <div class="form-container">
             <form class="form-container" onsubmit="return guardarCambios()">
-                <label for="nombre">Name:</label>
-                <input type="text" id="nombre" name="nombre"><br><br>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre"><br>
 
-                <label for="imagen">Imagen URL: </label>
+                <label for="imagen">Imagen: </label>
                 <input type="url" id="imagen" name="imagen" ><br>
 
-                <br>
+              
                 <label for="tipo">Tipo: </label>
                 <select id="tipo" name="tipo" required>
                     <option value="" disabled selected>Selecciona el tipo</option>
@@ -140,7 +140,7 @@
                     <option value="Ave">Ave</option>
                     <option value="Mostruo">Mostruo</option>
                 </select>
-                <br><br>
+                <br>
 
                 <label for="peligrosidad">Peligrosidad:</label>
                 <select id="peligrosidad" name="peligrosidad" required>
@@ -165,7 +165,7 @@
 
                 <button onclick="NuevoWesen()">Agregar Nuevo Wesen</button><br>
                 <button onclick="guardarCambios()">Guardar Cambios</button><br>
-                <button onclick="eliminar()">eliminar</button><br>
+                <button onclick="eliminar()">Eliminar</button><br>
 
 
 
