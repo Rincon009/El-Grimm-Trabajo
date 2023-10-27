@@ -17,9 +17,7 @@ function mostrarInformacion(id) {
         peligrosidadSelect.value = wesen.peligrosidad;
         descripcionTextarea.value = wesen.descripcion;
         notasTextarea.value = wesen.notas;
-    } else {
-        console.error('No se encontró un Wesen con el ID proporcionado');
-    }
+
 }
 
 function NuevoWesen() {
