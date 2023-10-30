@@ -17,11 +17,8 @@ function mostrarInformacion(id) {
         peligrosidadSelect.value = wesen.peligrosidad;
         descripcionTextarea.value = wesen.descripcion;
         notasTextarea.value = wesen.notas;
-    }else{
-        alert('Wesen no encontrado');
     }
 }
-
 function NuevoWesen() {
     var nombre = document.getElementById('nombre').value;
     var imagen = document.getElementById('imagen').value;
