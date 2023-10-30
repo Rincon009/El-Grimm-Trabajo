@@ -1,124 +1,3 @@
-function mostrarInformacion(id) {
-    var wesen = wesenInfo.find(function (w) {
-        return w.id === id;
-    });
-
-    if (wesen) {
-        var nombreInput = document.getElementById('nombre');
-        var imagenInput = document.getElementById('imagen');
-        var tipoSelect = document.getElementById('tipo');
-        var peligrosidadSelect = document.getElementById('peligrosidad');
-        var descripcionTextarea = document.getElementById('descripcion');
-        var notasTextarea = document.getElementById('notas');
-
-        nombreInput.value = wesen.nombre;
-        imagenInput.value = wesen.imagen;
-        tipoSelect.value = wesen.tipo;
-        peligrosidadSelect.value = wesen.peligrosidad;
-        descripcionTextarea.value = wesen.descripcion;
-        notasTextarea.value = wesen.notas;
-    }
-}
-function NuevoWesen() {
-    var nombre = document.getElementById('nombre').value;
-    var imagen = document.getElementById('imagen').value;
-    var tipo = document.getElementById('tipo').value;
-    var peligrosidad = document.getElementById('peligrosidad').value;
-    var descripcion = document.getElementById('descripcion').value;
-    var notas = document.getElementById('notas').value;
-
-
-    var nuevoWesen = {
-        id: nombre,
-        nombre: nombre,
-        imagen: imagen,
-        tipo: tipo,
-        peligrosidad: peligrosidad,
-        descripcion: descripcion,
-        notas: notas
-    };
-
-   
-    wesenInfo.push(nuevoWesen);
-
-    var newRow = document.createElement('tr');
-    newRow.id = nuevoWesen.id;
-
-    var nameCell = document.createElement('td');
-    nameCell.textContent = nombre;
-    nameCell.onclick = function() {
-        mostrarInformacion(nuevoWesen.id);
-    };
-
-    var imageCell = document.createElement('td');
-    var wesenImage = document.createElement('img');
-    wesenImage.style.width = "140px";
-    wesenImage.style.height = "130px";
-    wesenImage.src = imagen;
-    wesenImage.alt = nombre;
-    wesenImage.onclick = function() {
-        mostrarInformacion(nuevoWesen.id);
-    };
-    imageCell.appendChild(wesenImage);
-
-    newRow.appendChild(nameCell);
-    newRow.appendChild(imageCell);
-
-    var tableBody = document.querySelector('.list-container tbody');
-    tableBody.appendChild(newRow);
-
-    document.getElementById('nombre').value = '';
-    document.getElementById('imagen').value = '';
-    document.getElementById('tipo').value = '';
-    document.getElementById('peligrosidad').value = '';
-    document.getElementById('descripcion').value = '';
-    document.getElementById('notas').value = '';
-
-    mostrarInformacion(nuevoWesen.id);
-    resetearFormulario()
-    return false;
-}
-
-function guardarCambios() {
-    var id = document.getElementById('nombre').value.toLowerCase();
-    var nombre = document.getElementById('nombre').value;
-    var imagen = document.getElementById('imagen').value;
-    var tipo = document.getElementById('tipo').value;
-    var peligrosidad = document.getElementById('peligrosidad').value;
-    var descripcion = document.getElementById('descripcion').value;
-    var notas = document.getElementById('notas').value;
-
-    var wesen = wesenInfo.find(function (w) {
-        return w.id === id;
-    });
-
-   
-    wesen.nombre = nombre;
-    wesen.imagen = imagen;
-    wesen.tipo = tipo;
-    wesen.peligrosidad = peligrosidad;
-    wesen.descripcion = descripcion;
-    wesen.notas = notas;
-
-    
-    return false;
-}
-function resetearFormulario() {
-    
-    document.getElementById('nombre').value = '';
-    document.getElementById('imagen').value = '';
-    document.getElementById('tipo').value = '';
-    document.getElementById('peligrosidad').value = '';
-    document.getElementById('descripcion').value = '';
-    document.getElementById('notas').value = '';
-}
-
-function eliminar() {
-    var tableBody = document.querySelector('.list-container tbody');
-    tableBody.removeChild(tableBody.lastElementChild);
-  }
-
-
 var wesenInfo = [
     {
         id: 'alpe',
@@ -219,3 +98,107 @@ var wesenInfo = [
     }
 
 ];
+
+function mostrarInformacion(id) {
+    var wesen = wesenInfo.find(function (w) {
+        return w.id === id;
+    });
+
+    if (wesen) {
+        var campos = ['nombre', 'imagen', 'tipo', 'peligrosidad', 'descripcion', 'notas'];
+        campos.forEach(function (campo) {
+            document.getElementById(campo).value = wesen[campo];
+        });
+    }
+}
+
+function NuevoWesen() {
+    var nombre = document.getElementById('nombre').value;
+    var imagen = document.getElementById('imagen').value;
+    var tipo = document.getElementById('tipo').value;
+    var peligrosidad = document.getElementById('peligrosidad').value;
+    var descripcion = document.getElementById('descripcion').value;
+    var notas = document.getElementById('notas').value;
+
+
+    var nuevoWesen = {
+        id: nombre,
+        nombre: nombre,
+        imagen: imagen,
+        tipo: tipo,
+        peligrosidad: peligrosidad,
+        descripcion: descripcion,
+        notas: notas
+    };
+
+   
+    wesenInfo.push(nuevoWesen);
+
+    var newRow = document.createElement('tr');
+    newRow.id = nuevoWesen.id;
+
+    var nameCell = document.createElement('td');
+    nameCell.textContent = nombre;
+    nameCell.onclick = function() {
+        mostrarInformacion(nuevoWesen.id);
+    };
+
+    var imageCell = document.createElement('td');
+    var wesenImage = document.createElement('img');
+    wesenImage.style.width = "140px";
+    wesenImage.style.height = "130px";
+    wesenImage.src = imagen;
+    wesenImage.alt = nombre;
+    wesenImage.onclick = function() {
+        mostrarInformacion(nuevoWesen.id);
+    };
+    imageCell.appendChild(wesenImage);
+
+    newRow.appendChild(nameCell);
+    newRow.appendChild(imageCell);
+
+    var tableBody = document.querySelector('.list-container tbody');
+    tableBody.appendChild(newRow);
+
+    document.getElementById('nombre').value = '';
+    document.getElementById('imagen').value = '';
+    document.getElementById('tipo').value = '';
+    document.getElementById('peligrosidad').value = '';
+    document.getElementById('descripcion').value = '';
+    document.getElementById('notas').value = '';
+
+    mostrarInformacion(nuevoWesen.id);
+    resetearFormulario()
+    return false;
+}
+
+function guardarCambios() {
+    var id = document.getElementById('nombre').value.toLowerCase();
+    var wesen = wesenInfo.find(function (w) {
+        return w.id === id;
+    });
+
+    if (wesen) {
+        var campos = ['nombre', 'imagen', 'tipo', 'peligrosidad', 'descripcion', 'notas'];
+
+        campos.forEach(function (campo) {
+            wesen[campo] = document.getElementById(campo).value;
+        });
+    }
+
+    return false;
+}
+
+function resetearFormulario() {
+    var campos = ['nombre', 'imagen', 'tipo', 'peligrosidad', 'descripcion', 'notas'];
+
+    campos.forEach(function (campo) {
+        document.getElementById(campo).value = '';
+    });
+}
+
+function eliminar() {
+    var tableBody = document.querySelector('.list-container tbody');
+    tableBody.removeChild(tableBody.lastElementChild);
+}
+
