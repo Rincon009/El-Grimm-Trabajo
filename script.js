@@ -201,4 +201,3 @@ function eliminar() {
     var tableBody = document.querySelector('.list-container tbody');
     tableBody.removeChild(tableBody.lastElementChild);
 }
-
